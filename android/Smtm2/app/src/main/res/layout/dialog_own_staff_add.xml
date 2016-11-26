@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:background="#F2F2F2"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#292929"
+        android:text="추가정보입력"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        />
+
+    <TextView
+        android:id="@+id/add_staff_name"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="10dp"
+        />
+    <TextView
+        android:id="@+id/add_staff_email"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/add_staff_phone"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp" />
+
+    <View
+        android:layout_width="260dp"
+        android:layout_height="1dp"
+        android:background="#292929"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <EditText
+        android:id="@+id/input_hourly_wage"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:background="#fff"
+        android:paddingLeft="10dp"
+        android:hint="시급 입력"
+        />
+    <Button
+        android:id="@+id/complete"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:background="#FDC83E"
+        android:layout_marginRight="25dp"
+        android:text="추가하기" />
+</LinearLayout>

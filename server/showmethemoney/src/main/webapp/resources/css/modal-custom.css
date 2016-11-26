@@ -1,0 +1,34 @@
+#sidebar {
+	overflow-x: hidden;
+}	
+
+#sidebar div {
+	position: absolute;
+	left: 15px;
+	top: 27%;
+}
+
+#sidebar .delete-icon {
+	border: 1px solid #3789de;
+    border-radius: 15px;
+	min-width: 17px;
+	min-height: 17px;
+	background-color : #3789de;
+	color: #ffffff;
+	
+}
+.modal-custom{
+	width: 800px !important;
+	margin: 0px auto !important;
+}
+
+#calendar {
+	width : 550px;
+	float: left;
+}
+
+#daily-detail-view {
+	width: 200px;
+	height: 200px;
+	float : right;
+}

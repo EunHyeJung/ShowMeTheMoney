@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dev.smtm.mapper.StaffMapper">
+	<resultMap id="staff" type="com.dev.smtm.domain.StaffVO">
+		<result property="hourly_wage" column="hourly_wage" />
+		<association property="userVO" resultMap="user" />
+	</resultMap>
+
+	<resultMap id="user" type="com.dev.smtm.domain.UserVO">
+		<result property="phone" column="phone" />
+		<result property="email" column="email" />
+		<result property="name" column="name" />
+	</resultMap>
+
+
+
+	<select id="listAll" resultType="com.dev.smtm.dto.StaffDTO">
+		<![CDATA[
+		SELECT  s.staff_id,
+			 s.hourly_wage,
+			 s.status,
+		      u.name,
+		      u.phone,
+		      u.email
+		FROM   user AS u JOIN staff AS s
+		ON      u.user_id = s.user_id
+		WHERE
+		      s.store_id = #{store_id} 
+		]]>
+	</select>
+
+	<select id="readMessageList" resultType="com.dev.smtm.dto.MessageDTO">
+		<![CDATA[
+		SELECT store.store_name, staff.grade, staff.hourly_wage, staff.status
+		FROM store JOIN staff
+		ON store.store_id = staff.store_id
+		WHERE user_id = #{user_id}  AND status = -1
+		]]>
+	</select>
+	<!-- select user_id, email, name, phone, mode from user where user_id = 
+		#{user_id} -->
+	<select id="searchEmail" resultType="com.dev.smtm.domain.UserVO">
+		select user_id, email, name,
+		phone
+		from user where email =
+		#{email}
+	</select>
+
+	<select id="searchPhone" resultType="com.dev.smtm.domain.UserVO">
+		select user_id, email, name,
+		phone
+		from user where phone =
+		#{phone}
+	</select>
+
+	<insert id="insert" parameterType="com.dev.smtm.domain.StaffVO">
+		insert into staff(store_id, user_id, grade,
+		hourly_wage)
+		values(#{store_id}, #{user_id}, #{grade},
+		#{hourly_wage})
+
+		<selectKey keyProperty="staff_id" resultType="java.lang.Integer">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<update id="update" parameterType="int">
+		update staff set status=1
+		where staff_id=#{staff_id}
+	</update>
+
+
+	<delete id="delete">
+		delete from staff where staff_id = #{staff_id}
+	</delete>
+
+	<select id="read" resultType="com.dev.smtm.domain.StaffVO">
+		select *
+		from staff where
+		staff_id =
+		#{staff_id}
+	</select>
+
+	<select id="readStaffByUserId" parameterType="int"
+		resultType="com.dev.smtm.dto.UserStaffDTO">
+		SELECT s.store_name, s.store_id, st.staff_id
+		FROM staff AS st
+		JOIN user AS u
+		ON st.user_id = u.user_id
+		JOIN store AS s
+		ON st.store_id
+		= s.store_id	
+		WHERE
+		u.user_id = #{user_id}
+	</select>
+</mapper>

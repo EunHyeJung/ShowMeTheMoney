@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store">
+	<select id="getStoreName" parameterType="com.dev.smtm.domain.StoreVO"
+		resultType="com.dev.smtm.dto.StoreDTO">
+		SELECT store_name, user_id, store_id,
+		(SELECT count(*)
+		from
+		staff where store.store_id = staff.store_id) as cnt_staffs
+		FROM store
+		WHERE
+		user_id
+		= #{user_id}
+	</select>
+
+	<insert id="insertStore" parameterType="com.dev.smtm.domain.StoreVO">
+		INSERT INTO store ( user_id, store_name)
+		VALUES(#{user_id},#{store_name})
+		<selectKey keyProperty="store_id" resultType="java.lang.Integer">
+			SELECT
+			LAST_INSERT_ID()
+		</selectKey>
+	</insert>
+
+	<delete id="deleteStore" parameterType="com.dev.smtm.domain.StoreVO">
+		DELETE FROM store
+		WHERE
+		store_id = #{store_id}
+	</delete>
+
+	<select id="read" resultType="com.dev.smtm.domain.StoreVO">
+		select *
+		from store where
+		store_id =
+		#{store_id}
+	</select>
+
+
+</mapper>

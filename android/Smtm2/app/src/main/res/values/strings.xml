@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">Smtm</string>
+    <string name="title_activity_own_store_manage">Store Manage</string>
+    <string name="title_activity_own_pt_manage">PT Manage</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_own_store_settings">Settings</string>
+
+    <string name="action_messege">Messege</string>
+    <string name="action_sendWage">Send Money</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="title_activity_own_store_setting">OwnStoreSettingActivity</string>
+    <string name="title_activity_own_ptschdule">OwnPTSchduleActivity</string>
+    <string name="title_activity_ptschdule">PTSchduleActivity</string>
+
+    <string name="response_success">SUCCESS</string>
+    <string name="response_fail"> FAIL</string>
+
+    <string name="button_ok"> OK </string>
+    <string name="button_cancel"> CANCEL </string>
+    <string name="add_store"> 상점추가 </string>
+    <string name="add_store_error">상점명을 입력해주세요.</string>
+
+    <string name="app_join">회원가입</string>
+    <string name="app_login">로그인</string>
+    <string name="loginSuccess">로그인 완료</string>
+    <string name="signup_success">가입완료</string>
+    <string name="reason">가입이 불가한 사유가 생성되는 부분입니다.</string>
+    <string name="no_input_name"> 이름을 입력해주세요.</string>
+    <string name="no_input_email">이메일을 입력해주세요.</string>
+    <string name="no_input_pwd">비밀번호를 입력해주세요.</string>
+    <string name="no_input_phone">전화번호를 입력해주세요.</string>
+    <string name="sign_fail">회원가입에 실패하였습니다.</string>
+    <string name="login_fail">로그인에 실패하였습니다.</string>
+    <string name="network_error"> 네트워크 오류 </string>
+
+    <string name="level">직급</string>
+    <string name="setting">기본 설정</string>
+    <string name="sw1">야간 수당(기본 시급*1.5)</string>
+    <string name="sw2">4대 보험</string>
+    <string name="sw3">시급 정시 계산</string>
+
+    <string name="setting2">시급 설정</string>
+    <string name="tv1">아르바이트</string>
+    <string name="bt1">추가하기</string>
+    <string name="deleteBt">-</string>
+
+    <string name="setting3">직급 설정</string>
+    <string name="title_activity_ptstore">PTStoreActivity</string>
+    <string name="title_activity_temp">TempActivity</string>
+</resources>

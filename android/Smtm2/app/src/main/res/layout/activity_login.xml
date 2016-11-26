@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDC83E"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.dv.smtm.Common.LoginActivity">
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/sub_img" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="SHOW  ME  THE  MONEY"
+        android:textColor="#fff"
+        android:textSize="22dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="사장님과 알바생을 위한 시급관리 서비스"
+        android:textColor="#90000000"
+        android:textSize="12dp" />
+
+    <EditText
+        android:id="@+id/userID"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="90dp"
+        android:background="#ffffff"
+        android:ems="10"
+        android:hint="　email"
+        android:inputType="textEmailAddress"
+
+        android:textSize="14dp" />
+
+    <EditText
+        android:id="@+id/userPW"
+        android:layout_width="240dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:background="#fff"
+        android:ems="8"
+        android:hint="　Password"
+        android:inputType="textPassword"
+        android:textSize="14dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/goToJoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="80dp"
+
+            android:text="@string/app_join"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+
+            android:text="@string/app_login"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="1dp"
+        android:background="#fff" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/forgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="29dp"
+            android:layout_marginTop="20dp"
+            android:text="비밀번호 찾기"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#fff"
+            android:textSize="13dp" />
+
+
+        <CheckBox
+            android:id="@+id/rememberCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:checked="false"
+            android:text="자동로그인"
+            android:textColor="#fff" />
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "272353229751",
+    "project_id": "showmethemoney-140006"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272353229751:android:b8c8406f763ff128",
+        "android_client_info": {
+          "package_name": "com.dev.smtm.gcm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABZr1n4R3neMnBPEmBjjoNo2ktE9kWFH0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
